@@ -1,0 +1,2 @@
+io.slingr.endpoints.ftp.utils.ToJsonConverter
+io.slingr.endpoints.ftp.utils.ToStringConverter
