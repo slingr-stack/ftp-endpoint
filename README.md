@@ -9,7 +9,7 @@ supported by this endpoint are:
 - Archiving of downloaded files
 - Upload files
 
-For more information please refere to [docs](https://slingr-stack.github.io/platform/endpoints_ftp.html)
+For more information please refer to [docs](https://slingr-stack.github.io/platform/endpoints_ftp.html)
 
 ## About SLINGR
 
