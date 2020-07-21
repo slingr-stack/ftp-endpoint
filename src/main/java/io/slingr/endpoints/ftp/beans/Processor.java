@@ -237,9 +237,9 @@ public class Processor extends RouteBuilder {
         uploadOptions.add("localWorkDirectory="+localWorkDirectory);
         parametersToPrint.set("localWorkDirectory", localWorkDirectory);
 
-        options.add("binary=true");
-        uploadOptions.add("binary=true");
-        parametersToPrint.set("binary", true);
+        options.add("binary=false");
+        uploadOptions.add("binary=false");
+        parametersToPrint.set("binary", false);
 
         // we process one file at a time to avoid issues in some cases better to be safe than fast as we have had many issues in the past
         options.add("maxMessagesPerPoll=1");
