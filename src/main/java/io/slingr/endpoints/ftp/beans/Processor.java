@@ -221,13 +221,13 @@ public class Processor extends RouteBuilder {
             parametersToPrint.set("execPbsz", 0);
         }
 
-        options.add("passiveMode=true");
-        uploadOptions.add("passiveMode=true");
-        parametersToPrint.set("passiveMode", true);
+        options.add("passiveMode=false");
+        uploadOptions.add("passiveMode=false");
+        parametersToPrint.set("passiveMode", false);
 
-        options.add("disconnect=true");
-        uploadOptions.add("disconnect=true");
-        parametersToPrint.set("disconnect", true);
+        options.add("disconnect=false");
+        uploadOptions.add("disconnect=false");
+        parametersToPrint.set("disconnect", false);
 
         options.add("delay=" + POLL_INTERVAL);
         parametersToPrint.set("delay", POLL_INTERVAL);
@@ -237,13 +237,13 @@ public class Processor extends RouteBuilder {
         uploadOptions.add("localWorkDirectory="+localWorkDirectory);
         parametersToPrint.set("localWorkDirectory", localWorkDirectory);
 
-        options.add("binary=false");
-        uploadOptions.add("binary=false");
-        parametersToPrint.set("binary", false);
+        options.add("binary=true");
+        uploadOptions.add("binary=true");
+        parametersToPrint.set("binary", true);
 
         // we process one file at a time to avoid issues in some cases better to be safe than fast as we have had many issues in the past
-        options.add("maxMessagesPerPoll=1");
-        parametersToPrint.set("maxMessagesPerPoll", 1);
+        //options.add("maxMessagesPerPoll=1");
+        //parametersToPrint.set("maxMessagesPerPoll", 1);
 
         options.add("maximumReconnectAttempts=" + RECONNECTION_ATTEMPTS);
         parametersToPrint.set("maximumReconnectAttempts", RECONNECTION_ATTEMPTS);
@@ -258,14 +258,14 @@ public class Processor extends RouteBuilder {
             options.add("antFilterCaseSensitive=false");
             parametersToPrint.set("antFilterCaseSensitive", false);
         }
-        options.add("readLock=changed");
-        parametersToPrint.set("readLock", "changed");
+        //options.add("readLock=changed");
+        //parametersToPrint.set("readLock", "changed");
 
         options.add("fastExistsCheck=true");
         parametersToPrint.set("fastExistsCheck", true);
 
         options.add("ignoreFileNotFoundOrPermissionError=true");
-        parametersToPrint.set("ignoreFileNotFoundOrPermissionError", true);
+        parametersToPrint.set("ignoreFileNotFoundOrPermissionError", false);
 
         options.add("readLockTimeout=" + LOCK_TIMEOUT);
         parametersToPrint.set("readLockTimeout", LOCK_TIMEOUT);

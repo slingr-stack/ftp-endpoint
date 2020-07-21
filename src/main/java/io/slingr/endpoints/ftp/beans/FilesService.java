@@ -137,7 +137,7 @@ public class FilesService {
             headers.put(HEADER_INTERNAL_FOLDER, folder);
             headers.put(HEADER_FILE_PATH, parentOutputFolder+folder+"/"+fileName);
         }
-        logger.debug(String.format("File to upload [%s]", headers.getOrDefault(HEADER_FILE_PATH, "<empty>")));
+        logger.info(String.format("File to upload [%s]", headers.getOrDefault(HEADER_FILE_PATH, "<empty>")));
 
         // download the file from the endpoint
         final DownloadedFile dwnFile = files.download(fileId);
