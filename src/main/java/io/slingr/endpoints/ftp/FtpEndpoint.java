@@ -53,7 +53,7 @@ public class FtpEndpoint extends Endpoint {
     private String outputFolder;
 
     @EndpointProperty(name = "recursive")
-    private Boolean recursive;
+    private String recursive;
 
     private Processor processor = null;
 
